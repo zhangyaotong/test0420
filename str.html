@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <script>
+        // string方法
+
+        var str = 'zhangyaotong123'
+        console.log(str)
+
+        console.log(str.charAt(6))   //取下标为6的字符串字符
+
+        console.log(str.replace('123', '666'))   //替换字符串,将字符串中的'123',替换为'666'
+
+        console.log(str.slice(5, -2))  //截取字符串,第一个参数:开始的位置(从下标为5的位置开始截取,包含下标5对应的字符)  第二个参数:结束的位置(从下标为-2的位置开始截取,包含下标-2对应的字符)
+
+        console.log(str.split(''))  //以指定字符为间隔将字符串转化为数组(不传参数默认以 , 连接)
+
+        console.log(str.indexOf('2', 10))  //默认从下标为0的位置开始查找第一个参数(类型为字符串), 第二个参数可以指定从哪里开始找, 打印的是下标
+        
+    </script>
+</body>
+</html>

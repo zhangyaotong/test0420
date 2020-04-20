@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arr</title>
+</head>
+
+<body>
+    <script>
+        // 数组方法
+
+        var arr = [0, 1, 22, 33, 89, 45, 66, 77]
+        var arr2 = [55, 89, 88, 100, 300]
+        console.log(arr)
+        console.log(arr2)
+
+        console.log(arr.concat(arr2))  //数组合并, 返回的是一个新数组
+
+        console.log(arr.join())  //以指定的字符串为连接符, 将数组元素转成字符串,不传参数默认以 , 连接.   arr.join('') 01223389456677 (参数是空串的情况)
+
+        console.log(arr.push(200))  //在数组后面添加200, 返回的是数组变化后的新长度
+        console.log(arr.pop())  //从数组末尾删除一个数, 返回的是删除的那个元素
+
+        console.log(arr.unshift(-1))  //在数组头部添加数, 返回数组变化后的新长度
+        console.log(arr.shift())  //在数组头部删除一个数, 返回的是删除的那个元素
+
+        // console.log(arr.reverse())  //翻转数组, 不需要参数, 返回翻转后的数组
+
+        console.log(arr.slice(1, -1))  //截取数组当中的部分元素组成新数组. 第一个参数:开始的位置   第二个参数:结束的位置
+
+        // console.log(arr.sort())  //数组排序
+
+        // console.log(arr.splice(3, 3))  //删, 需要两个参数  起始位置和要删除的长度（个数）. 返回的是删除的元素组成的新数组
+
+        // console.log(arr.splice(8, 0, 700, 800, 900))  //增, 需要多个参数  起始位置和要删除的长度(0) 以及要新加入的元素，新加入的元素可以是多个. 返回的是删除的元素组成的新数组，[]
+        // console.log(arr)
+
+        // console.log(arr.splice(5, 2, 1000, 2000))   //改, 需要多个参数  起始位置和要删除的长度(非0) 以及要新加入的元素，新加入的元素可以是多个. 返回的是删除的元素组成的新数组. 会影响原数组
+        // console.log(arr)
+
+
+        console.log(arr.toString())  //把数组转化为字符串, 并返回结果
+
+
+        console.log(
+            arr.filter((item) => {   //检测数组元素, 并返回符合条件的数组(过滤)
+                return item > 33
+            })
+        )
+        
+
+        console.log(arr.indexOf(33, 1))  //默认从下标为0的位置开始查找第一个参数, 第二个参数可以指定从哪里开始找, 打印的是下标
+
+
+        console.log(arr.valueOf())  //返回数组对象的原始值
+
+
+        console.log(arr.find((item) => {  //返回满足条件的元素, 一旦找到满足条件的元素就停止遍历 (需要某一个单独的元素时, 适合用find, 效率高)
+            return item > 45
+        }))
+
+
+        console.log(arr.findIndex((item) => {  //返回满足条件的元素的下标, 一旦找到满足条件的元素就停止遍历
+            return item >= 33
+        }))
+
+
+        console.log(arr.map((item) => {  //返回一个新数组，新数组中的元素为原始数组中的每个元素调用函数处理后得到的值
+            return item + 10
+        }))
+
+        console.log(
+            arr.reduce((pre, item) => {   //根据数组中的元素进行统计(累计/累加)处理. 
+                return pre += item    //  pre:代表上一次累计的结果. 最后一个0: 代表初始值
+            },0)
+        )
+
+    </script>
+</body>
+
+</html>
